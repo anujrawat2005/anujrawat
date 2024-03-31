@@ -2,8 +2,9 @@
   "name": "anuj-rawat",
   "version": "1.0.0",
   "description": "This is anuj rawat",
-  "main": "App.js",
-  "scripts": {
+   "scripts": {
+    "start":"parcel index.html",
+    "build":"parcel build index.html",
     "test": "jest"
   },
   "repository": {
