@@ -4,7 +4,7 @@ const reslist =  [ {
         name:"KFC",
         cuisines :   ["Burgers" ,"chicken" ,"pepsi"] ,
         avgrating:"4.4",
-        cloudinaryimageid:" ANd9GcRlC1E9t2iqCsiimOpSXuJIFwKgQ-UeaSxAohOZbwghIg&s ",
+        cloudinaryimageid:"https://cdn4.singleinterface.com/files/banner_images/34404/1361_1624955685_5pcLegPieceBucketMeal310x236.jpg",
         costfortwo:"400 for two ",
         deliverytime:"35"
 } }, { data:{
@@ -37,7 +37,15 @@ const reslist =  [ {
         cloudinaryimageid:"ANd9GcT3XhMxOlmMvLFGSHz6gL8psx23g3SRfk1mi9TSbFyROw&s ",
         costfortwo:"200 for two",
         deliverytime:"25"
-    }}
+    }},{data :{
+        name:"krishna sweet house",
+        cuisines:["samosa","jalebi"],
+        avgrating:4.5,
+        cloudinaryimageid: "ANd9GcT3XhMxOlmMvLFGSHz6gL8psx23g3SRfk1mi9TSbFyROw&s ",
+        costfortwo:"100 for two",
+        deliverytime:"30"
+    }
+    }
 
 
 ];
