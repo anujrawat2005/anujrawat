@@ -35,8 +35,8 @@
 .restraunt-card {
     margin: 5px;
     padding: 5px;   
-    width: 250px;
-    height: 400px;
+    width: 270px;
+    height: 500px;
     border: 1 px Solid black;
     
 }
@@ -54,6 +54,7 @@
 
 .restraunt-logo {
     width: 90%;
+    height: 50%;
 }
 
 .filter-btn {
@@ -78,6 +79,7 @@
 
 .Shimmer-container{
     display: flex;
+    
 }
 
 .filter{

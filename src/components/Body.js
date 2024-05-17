@@ -3,6 +3,7 @@ import {   useState , useEffect } from "react";
 import reslist from "../utils/mockdata";
 import Shimmer from "./Shimmer";
 
+
 function Body() {
 
    //local state variable-superpowerful state variable
@@ -19,19 +20,20 @@ function Body() {
    }, []);
 
    const fetchData = async () => {
-      const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.65200&lng=77.16630&collection=83645&tags=layout_CCS_NorthIndian&sortBy=&filters=&type=rcv2&offset=0&page_type=null"
+      const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
       );
 
       const json = await data.json();
 
-      console.log(json);
+     
 
+      
 
       setfilteredRestraunts(reslist);
 
    };
 
-   return listofRestraunts.length === 0 ? (<Shimmer />) :
+   return listofRestraunts.length === 0?   (<Shimmer />) :
 
       (
          <div className="Body">

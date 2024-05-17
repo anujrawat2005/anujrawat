@@ -1,2 +1,2 @@
-export const CDN_URL ="https://i0.wp.com/stanzaliving.wpcomstaging.com/wp-content/uploads/2022/04/4ad20-pune-restaurants.jpg?fit=1000%2C667&ssl=1 " ;
+export const CDN_URL ="https://media-assets.swiggy.com/swiggy/image/upload/" ;
 export const Logo_URL ="  https://www.healthifyme.com/blog/wp-content/uploads/2022/01/Junk-Food-More-Harm-and-Lesser-Well-being.jpeg ";

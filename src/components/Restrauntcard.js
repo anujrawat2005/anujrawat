@@ -7,7 +7,7 @@ const Restrauntcard = (props) => {
     return(
         <div className="restraunt-card"  style={{background:"#f0f0f0"}} > 
          <img className="restraunt-logo" 
-         alt ="restraunt-logo" src={CDN_URL}
+         alt ="restraunt-logo" src={CDN_URL+cloudinaryimageid}
          />
           <h1>{name}</h1>
           <h2>{cuisines.join(",")}</h2>
