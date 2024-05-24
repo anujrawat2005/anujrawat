@@ -2,7 +2,7 @@
   "name": "anuj-rawat",
   "version": "1.0.0",
   "description": "This is anuj rawat",
-   "scripts": {
+  "scripts": {
     "start":"parcel index.html",
     "build":"parcel build index.html",
     "test": "jest"
@@ -29,6 +29,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+    
   },
   "browserlist":[
     "last 2 version"

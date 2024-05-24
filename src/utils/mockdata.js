@@ -51,6 +51,27 @@ const reslist =  [ {
         cloudinaryimageid:"fl_lossy,f_auto,q_auto,w_660/ae5e472f1ed25de6a008fee881fa7a35",
         costfortwo: "200 for two",
         deliverytime:"30"
+    }},{data:{
+        name:"Burger king",
+        cuisines:["Burger","Frenchfries"],
+        avgrating:4.0,
+        cloudinaryimageid:"e33e1d3ba7d6b2bb0d45e1001b731fcf",
+        costfortwo:"350 for two",
+        deliverytime:"25"
+    }},{data:{
+        name:"Monginis",
+        cuisines:["Cakes","Pastry"],
+        avgrating:4.5,
+        cloudinaryimageid:"nbhqyba52qjcirmhw8ag",
+        costfortwo:"300 for two",
+        deliverytime:"30"
+    }},{data:{
+        name:"Amul ice cream",
+        cuisines:["Icecream","Deserts"],
+        avgrating:3.9,
+        cloudinaryimageid:"fl_lossy,f_auto,q_auto,w_660/18d8b8fb6bac8063a6fa886e20148110",
+        costfortwo:"150 for two",
+        deliverytime:"25"
     }}
 
 

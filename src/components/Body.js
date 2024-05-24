@@ -1,10 +1,12 @@
 import Restrauntcard from "./Restrauntcard";
 import {   useState , useEffect } from "react";
 import reslist from "../utils/mockdata";
-import Shimmer from "./Shimmer";
+import Shimmer from "./shimmer";
+import{Link} from "react-router-dom";
 
 
-function Body() {
+
+function Body() {   
 
    //local state variable-superpowerful state variable
    const [listofRestraunts, setlistofRestraunts] = useState(reslist);
@@ -22,18 +24,21 @@ function Body() {
    const fetchData = async () => {
       const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
       );
+      
 
       const json = await data.json();
-
-     
+      console.log(json);
 
       
 
-      setfilteredRestraunts(reslist);
+      setlistofRestraunts(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+
+      setfilteredRestraunts(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
    };
 
-   return listofRestraunts.length === 0?   (<Shimmer />) :
+   return listofRestraunts.length === 0 ? 
+    ( <Shimmer />) :
 
       (
          <div className="Body">
@@ -46,9 +51,10 @@ function Body() {
                   <button onClick={() => {
                      console.log(searchText);
 
-                     const filteredRestraunts = listofRestraunts.filter((res) => res.data.name.toLowerCase().includes(searchText.toLowerCase())
+                     const filteredRestraunts = listofRestraunts.filter((res) => res.info.name.toLowerCase().includes(searchText.toLowerCase())
                      );
                      setfilteredRestraunts(filteredRestraunts);
+
 
 
 
@@ -70,8 +76,12 @@ function Body() {
                </button>
             </div>
             <div className="restraunt-container">
-               {filteredRestraunts.map((Restraunt, index) => (
-                  <Restrauntcard key={index} resdata={Restraunt} />
+               {filteredRestraunts.map((restraunt) => (
+                  <Link
+                  key={restraunt.info.id}
+                  to={"/restaurants/"+restraunt.info.id}>
+                  
+                  <Restrauntcard key={restraunt.info.id} resdata={restraunt} /> </Link>
                ))}
             </div>
          </div>
