@@ -2,7 +2,7 @@ import  { CDN_URL } from "../utils/constants";
 
 const Restrauntcard = (props) => {
     const {resdata}=props;
-    const{ name,cloudinaryImageId,avgrating,costfortwo,deliverytime,cuisines}=resdata?.info;
+    const{ name,cloudinaryImageId,avgRatingString,costfortwo,deliveryTime,cuisines}=resdata?.info;
    
     return(
         <div className="restraunt-card"  style={{background:"#f0f0f0"}} > 
@@ -11,9 +11,9 @@ const Restrauntcard = (props) => {
          />
           <h1>{name}</h1>
           <h2>{cuisines.join(",")}</h2>
-          <h3>{avgrating}</h3>
-          <h4>{costfortwo }</h4>
-          <h5>{deliverytime} minutes</h5>
+          <h3>{avgRatingString}</h3>
+          <h4>{costfortwo}</h4>
+          <h5>{deliveryTime} minutes</h5>
           
         </div>
     );

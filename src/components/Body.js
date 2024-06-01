@@ -2,19 +2,19 @@ import Restrauntcard from "./Restrauntcard";
 import {   useState , useEffect } from "react";
 import reslist from "../utils/mockdata";
 import Shimmer from "./shimmer";
-import{Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
 
 function Body() {   
 
-   //local state variable-superpowerful state variable
-   const [listofRestraunts, setlistofRestraunts] = useState(reslist);
+   //local state variable-superpowerful state variabless
+   const [listofRestraunts, setlistofRestraunts] = useState([]);
    const [filteredRestraunts, setfilteredRestraunts] = useState([]);
 
    const [searchText, setsearchText] = useState("");
 
-   //whenever the state variable updates ,react triggered cycle (re-render the componenet)
+   //whenever the state variable updates ,react triggered cycle (re-render the component)
    console.log("Body Rendered");
 
    useEffect(() => {
@@ -38,7 +38,7 @@ function Body() {
    };
 
    return listofRestraunts.length === 0 ? 
-    ( <Shimmer />) :
+     <Shimmer /> :
 
       (
          <div className="Body">
@@ -47,7 +47,7 @@ function Body() {
                   <input type="text" className="search box" value={searchText}
                      onChange={(e) => {
                         setsearchText(e.target.value);
-                     } } />
+                      } } />
                   <button onClick={() => {
                      console.log(searchText);
 
@@ -67,7 +67,7 @@ function Body() {
                <button className="filter-btn"
                   onClick={() => {
                      const filteredList = listofRestraunts.filter(
-                        (res) => res.data.avgrating > 4);
+                        (res) => res.info.avgRatingString > 4.5);
                      setlistofRestraunts(filteredList);
 
 
@@ -79,7 +79,7 @@ function Body() {
                {filteredRestraunts.map((restraunt) => (
                   <Link
                   key={restraunt.info.id}
-                  to={"/restaurants/"+restraunt.info.id}>
+                  to={"/restaurants/"+restraunt.info.id} >
                   
                   <Restrauntcard key={restraunt.info.id} resdata={restraunt} /> </Link>
                ))}

@@ -1,12 +1,12 @@
 const reslist =  [ { 
-        type:"Restraunt",
-        data :  {
-        name:"KFC",
-        cuisines :   ["Burgers" ,"chicken" ,"pepsi"] ,
-        avgrating:"4.4",
-        cloudinaryimageid:"fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/37dc9e37-386f-453b-a219-ffa2c154750b_337622.JPG",
-        costfortwo:"400 for two ",
-        deliverytime:"35"
+    type:"Restraunt",
+    data :  {
+    name:"KFC",
+    cuisines :   ["Burgers" ,"chicken" ,"pepsi"] ,
+    avgrating:"4.4",
+    cloudinaryimageid:"fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/37dc9e37-386f-453b-a219-ffa2c154750b_337622.JPG",
+    costfortwo:"400 for two ",
+    deliverytime:"35"
 } }, { data:{
     name:"Pizza Hut",
    cuisines :   ["Macpuffs" ,"Pizza" ,"pepsi"] ,

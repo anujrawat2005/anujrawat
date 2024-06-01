@@ -8,7 +8,7 @@ import { MENU_API } from "../utils/constants";
 
 const RestrauntMenu = () => {
 
-    const[resInfo, setresInfo]= useState(null);
+    const[resInfo,setresInfo] = useState(null);
    const { resId }=useParams();
    
 
@@ -23,7 +23,7 @@ const RestrauntMenu = () => {
     
     const json = await data.json()
 
-    console .log(json)
+    console.log(json)
     setresInfo(json.data);
 
     
@@ -32,7 +32,7 @@ const RestrauntMenu = () => {
    };
 
 
-   if( resInfo=== null) return<Shimmer/>
+   if( resInfo === null) return<Shimmer/>
 
 
     const  {name,cuisines,costForTwoMessage} = resInfo?.cards[1]?.groupedCard?.cardGroupMap?.RESTAURANT?.cards[0]?.card?.card?.info;  

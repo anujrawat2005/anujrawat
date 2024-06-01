@@ -18,3 +18,17 @@
  * -contact
  * 
  */s
+
+ //local state variable
+ const [listofrestraunts] = useState([]);
+
+ //Normal javascript variable
+ let listofrestraunts = 
+
+
+ onClick={()=>{
+    
+ }
+ }
+
+ 

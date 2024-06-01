@@ -9,15 +9,6 @@ import RestrauntMenu from "./components/RestrauntsMenu";
 import { createBrowserRouter, RouterProvider,Outlet } from "react-router-dom";
 import Login from "./components/Login";
 
-
-
-
-
-
-
-
-
-
 const Applayout = () =>{
     return (<div className="app">
         <Header/>
@@ -30,7 +21,7 @@ const Applayout = () =>{
 const appRouter =  createBrowserRouter([
     {
         path:"/",
-        element:<Applayout/>,
+        element:<Applayout />,
         children:[
             {
                 path:"/",
