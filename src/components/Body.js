@@ -1,6 +1,6 @@
 import Restrauntcard from "./Restrauntcard";
 import {   useState , useEffect } from "react";
-import reslist from "../utils/mockdata";
+import useOnlineStatus from "../utils/useonlinestatus";
 import Shimmer from "./shimmer";
 import {Link} from "react-router-dom";
 
@@ -36,6 +36,13 @@ function Body() {
       setfilteredRestraunts(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
    };
+
+   const onlineStatus= useOnlineStatus();
+   if( onlineStatus=== false)
+      return(
+   <h1>Looks like you are offline,Please check your internet connection</h1>
+      );
+
 
    return listofRestraunts.length === 0 ? 
      <Shimmer /> :
